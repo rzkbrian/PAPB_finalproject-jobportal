@@ -8,6 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+
 public class insertPostKerjaActivity extends AppCompatActivity {
     private EditText judulPekerjaan;
     private EditText deskripsiPekerjaan;
@@ -15,6 +18,10 @@ public class insertPostKerjaActivity extends AppCompatActivity {
     private EditText gajiPekerjaan;
 
     private Button submitPostPekerjaan;
+
+    //Firebase..
+    private FirebaseAuth mAuth;
+    private DatabaseReference MJobPost;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
