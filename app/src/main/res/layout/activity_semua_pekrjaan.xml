@@ -1,9 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SemuaPekrjaanActivity">
+    android:orientation="vertical"
+    tools:context=".SemuaPekrjaanActivity"
+    android:background="@color/primary">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Card Layout -->
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/button_shape2"
+        android:elevation="15dp"
+        android:orientation="vertical">
+
+        <!-- Logo, Rating, dan Teks Rating -->
+        <LinearLayout
+            android:id="@+id/lylogo1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <!-- Logo -->
+            <ImageView
+                android:id="@+id/logoImageView"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/swift" />
+
+            <!-- Spacer (untuk mengatur jarak antara logo dan rating) -->
+            <Space
+                android:layout_width="110dp"
+                android:layout_height="1dp" />
+
+            <!-- Rating Gambar -->
+            <ImageView
+                android:id="@+id/ratingImageView"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:contentDescription="Rating Image"
+                android:src="@drawable/star" />
+
+            <!-- Teks Rating -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4.5" />
+        </LinearLayout>
+
+        <!-- Text Layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:orientation="vertical">
+
+            <!-- Nama Pekerjaan -->
+            <TextView
+                android:id="@+id/jobTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Swift Developer"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Tempat Kerja -->
+            <TextView
+                android:id="@+id/workplaceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Malang, Indonesia"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="14sp" />
+
+            <!-- Linear Layout untuk Jenis Pekerjaan dan Waktu Posting -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <!-- Waktu Posting Pekerjaan -->
+                <TextView
+                    android:id="@+id/postingTimeTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2 days ago"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="14sp" />
+
+                <!-- Spacer (untuk memberikan jarak antara Waktu Posting dan Jenis Pekerjaan) -->
+                <Space
+                    android:layout_width="8dp"
+                    android:layout_height="1dp" />
+
+                <!-- Jenis Pekerjaan (Fulltime, Part-time, dll.) -->
+                <TextView
+                    android:id="@+id/jobTypeTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fulltime"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Button Layout with Shadow -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:gravity="center"
+            android:elevation="5dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_shape"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:textColor="@color/white"
+                android:text="Apply Now" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
