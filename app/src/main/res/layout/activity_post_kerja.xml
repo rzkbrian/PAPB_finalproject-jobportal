@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/primary"
     tools:context=".PostKerjaActivity">
 
 
@@ -21,7 +22,8 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:id="@+id/recycler_job_post_id"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/card_item">
 
 
             </androidx.recyclerview.widget.RecyclerView>
@@ -32,9 +34,10 @@
             android:layout_height="wrap_content"
             android:id="@+id/tambahPostbtn"
             android:text="Tambah Postingan"
+            android:textColor="@color/white"
             android:layout_gravity="bottom|center"
             android:layout_margin="30dp"
-            android:background="@drawable/button_color"
+            android:background="@drawable/button_shape"
             android:paddingLeft="80dp"
             android:paddingRight="80dp"
             />
