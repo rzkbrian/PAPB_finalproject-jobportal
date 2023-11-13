@@ -7,4 +7,5 @@
     <color name="secondary">#171931</color>
     <color name="tertiary">#FFC05A</color>
     <color name="strokeColor">#111</color>
+    <color name="toolbarColor">#124576</color>
 </resources>
