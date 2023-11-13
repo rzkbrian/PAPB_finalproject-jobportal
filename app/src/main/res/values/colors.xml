@@ -2,8 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="primary">#A10840</color>
-    <color name="input_colot">#F0E8EB</color>
+    <color name="primary">#BC0060</color>
+    <color name="input_color">#F0E8EB</color>
     <color name="secondary">#171931</color>
     <color name="tertiary">#FFC05A</color>
     <color name="strokeColor">#111</color>

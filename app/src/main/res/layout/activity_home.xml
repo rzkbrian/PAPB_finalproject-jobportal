@@ -4,40 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:background="@drawable/home_background"
     tools:context=".HomeActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        >
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/cariJob_btn"
-            android:text="Temukan Pekerjaan"
-            android:textSize="16sp"
-            android:layout_margin="20dp"
-            android:background="@drawable/button_color"
-            android:paddingTop="20dp"
-            android:paddingBottom="20dp"
-            />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/postJob_btn"
-            android:text="Posting Pekerjaan"
-            android:background="@drawable/button_color"
-            android:textSize="16sp"
-            android:paddingBottom="20dp"
-            android:paddingTop="20dp"
-            android:layout_margin="20dp"
-            />
-    </LinearLayout>
 
 </LinearLayout>
