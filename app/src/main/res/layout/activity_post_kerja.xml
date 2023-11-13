@@ -7,15 +7,23 @@
     android:orientation="vertical"
     tools:context=".PostKerjaActivity">
 
-    <include layout="@layout/toolbar"
-        android:id="@+id/toolbarPostKerja"/>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="bottom"
-
         >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tambahPostbtn"
+            android:text="Tambah Postingan"
+            android:layout_gravity="bottom|center"
+            android:layout_margin="30dp"
+            android:background="@drawable/button_color"
+            android:paddingLeft="80dp"
+            android:paddingRight="80dp"
+            />
+
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 

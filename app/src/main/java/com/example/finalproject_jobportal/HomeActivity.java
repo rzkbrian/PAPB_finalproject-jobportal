@@ -2,6 +2,7 @@ package com.example.finalproject_jobportal;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -12,6 +13,7 @@ public class HomeActivity extends AppCompatActivity {
     private Button btnCariKerja;
     private Button btnPostKerja;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
