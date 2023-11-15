@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.view.LayoutInflater;
+
 
 import com.example.finalproject_jobportal.model.Data;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -24,6 +26,10 @@ public class PostJobActivity extends AppCompatActivity {
 
     //Recycler View
     private RecyclerView recyclerView;
+
+    private FirebaseRecyclerAdapter<Data, myViewHolder> adapter;
+
+    private String uId;
 
     private TextView btnBackHome;
     //Firebase
@@ -39,12 +45,16 @@ public class PostJobActivity extends AppCompatActivity {
         backToHome();
 
         mAuth = FirebaseAuth.getInstance();
+        uId = mAuth.getCurrentUser().getUid();
+
+
         FirebaseUser mUser = mAuth.getCurrentUser();
         String uId = mUser.getUid();
 
         postKerjaDatabase = FirebaseDatabase.getInstance().getReference().child("Job Post").child(uId);
 
         recyclerView=findViewById(R.id.recycler_job_post_id);
+
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         layoutManager.setStackFromEnd(true);
         layoutManager.setReverseLayout(true);
@@ -72,12 +82,15 @@ public class PostJobActivity extends AppCompatActivity {
     @Override
     protected void onStart(){
         super.onStart();
+        postKerjaDatabase = FirebaseDatabase.getInstance().getReference().child("Job Post").child(uId);
+
+
 
         FirebaseRecyclerOptions<Data> options =
                 new FirebaseRecyclerOptions.Builder<Data>()
                         .setQuery(postKerjaDatabase, Data.class)
                         .build();
-        FirebaseRecyclerAdapter<Data,myViewHolder>adapter= new FirebaseRecyclerAdapter<Data, myViewHolder>(options) {
+        adapter= new FirebaseRecyclerAdapter<Data, myViewHolder>(options) {
             @Override
             protected void onBindViewHolder(@NonNull myViewHolder viewHolder, int position, @NonNull Data model) {
                 viewHolder.setJobTitle(model.getTitle());
@@ -90,11 +103,14 @@ public class PostJobActivity extends AppCompatActivity {
             @NonNull
             @Override
             public myViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-                return null;
+                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.jobpost_items, parent, false);
+                return new myViewHolder(view);
             }
+
         };
 
         recyclerView.setAdapter(adapter);
+        adapter.startListening();
 
     }
 
