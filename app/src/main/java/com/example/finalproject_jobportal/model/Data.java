@@ -1,10 +1,10 @@
 package com.example.finalproject_jobportal.model;
 
 public class Data {
-    String judul;
-    String deskripsi;
-    String gaji;
-    String skill;
+    String title;
+    String description;
+    String salary;
+    String skills;
 
     String id;
     String date;
@@ -14,44 +14,44 @@ public class Data {
     }
 
     public Data(String judul, String deskripsi, String gaji, String skill, String id, String date) {
-        this.judul = judul;
-        this.deskripsi = deskripsi;
-        this.gaji = gaji;
-        this.skill = skill;
+        this.title = judul;
+        this.description = deskripsi;
+        this.salary = gaji;
+        this.skills = skill;
         this.id = id;
         this.date = date;
     }
 
-    public String getJudul() {
-        return judul;
+    public String getTitle() {
+        return title;
     }
 
-    public void setJudul(String judul) {
-        this.judul = judul;
+    public void setTitle(String judul) {
+        this.title = judul;
     }
 
-    public String getDeskripsi() {
-        return deskripsi;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDeskripsi(String deskripsi) {
-        this.deskripsi = deskripsi;
+    public void setDescription(String deskripsi) {
+        this.description = deskripsi;
     }
 
-    public String getGaji() {
-        return gaji;
+    public String getSalary() {
+        return salary;
     }
 
-    public void setGaji(String gaji) {
-        this.gaji = gaji;
+    public void setSalary(String gaji) {
+        this.salary = gaji;
     }
 
-    public String getSkill() {
-        return skill;
+    public String getSkills() {
+        return skills;
     }
 
-    public void setSkill(String skill) {
-        this.skill = skill;
+    public void setSkilsl(String skill) {
+        this.skills = skill;
     }
 
     public String getId() {

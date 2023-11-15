@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="16dp"
-    android:cardElevation="15dp"
     android:layout_gravity="center"
     app:cardCornerRadius="10dp"
     app:cardMaxElevation="5dp"
@@ -40,8 +39,8 @@
             <!-- Rating Gambar -->
             <ImageView
                 android:id="@+id/ratingImageView"
+               android:layout_height="20dp"
                 android:layout_width="20dp"
-                android:layout_height="20dp"
                 android:contentDescription="Rating Image"
                 android:src="@drawable/star" />
 

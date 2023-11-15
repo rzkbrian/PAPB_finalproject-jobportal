@@ -34,7 +34,7 @@
             />
         
         <EditText
-            android:id="@+id/loginEmail"
+            android:id="@+id/email_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
@@ -61,7 +61,7 @@
             android:inputType="textVisiblePassword"
             android:textSize="16sp"
             android:textColor="@color/black"
-            android:id="@+id/loginPassword"
+            android:id="@+id/login_password"
             />
 
 
@@ -83,7 +83,7 @@
 
         <Button
 
-            android:id="@+id/buttonSignin"
+            android:id="@+id/btn_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -98,7 +98,7 @@
 
 
         <Button
-            android:id="@+id/buttonSignup"
+            android:id="@+id/btn_reg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

@@ -10,8 +10,8 @@ import android.widget.Button;
 
 public class HomeActivity extends AppCompatActivity {
 
-    private Button btnCariKerja;
-    private Button btnPostKerja;
+    private Button btnAllJob;
+    private Button btnPostJob;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -19,21 +19,21 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        btnCariKerja = findViewById(R.id.cariJob_btn);
-        btnPostKerja = findViewById(R.id.postJob_btn);
+        btnAllJob = findViewById(R.id.btn_alljob);
+        btnPostJob = findViewById(R.id.btn_postjob);
 
 
-        btnCariKerja.setOnClickListener(new View.OnClickListener() {
+        btnAllJob.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), SemuaPekrjaanActivity.class));
+                startActivity(new Intent(getApplicationContext(), AllJobActivity.class));
             }
         });
 
-        btnPostKerja.setOnClickListener(new View.OnClickListener() {
+        btnPostJob.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), PostKerjaActivity.class));
+                startActivity(new Intent(getApplicationContext(), PostJobActivity.class));
             }
         });
     }

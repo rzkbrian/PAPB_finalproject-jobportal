@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="top|center"
-    tools:context=".insertPostKerjaActivity">
+    tools:context=".InsertJobPostActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -16,6 +16,15 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_margin="10dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/back_icon"
+                android:id="@+id/backbtn"
+                />
+
+
 
             <TextView
                 android:layout_width="match_parent"
@@ -27,6 +36,7 @@
                 android:textStyle="bold"
                 android:fontFamily="serif"
                 android:layout_margin="10dp"
+                android:textColor="@color/black"
                 />
 
 
@@ -53,12 +63,13 @@
 
                 <RelativeLayout
                      android:layout_width="0dp"
-                     android:layout_height="wrap_content"
+                     android:layout_height="48dp"
                      android:layout_weight="3">
                      <EditText
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/inputJobTitle"/>
+                        android:layout_height="48dp"
+                         android:hint="Judul Pekerjaan"
+                        android:id="@+id/job_title"/>
                     </RelativeLayout>
             </LinearLayout>
 
@@ -88,8 +99,9 @@
                     android:layout_weight="3">
                     <EditText
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/inputJobDesc"/>
+                        android:layout_height="48dp"
+                        android:hint="Deskripsi Pekerjaan"
+                        android:id="@+id/job_description"/>
                 </RelativeLayout>
             </LinearLayout>
 
@@ -119,8 +131,9 @@
                     android:layout_weight="3">
                     <EditText
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/inputJobSkill"
+                        android:layout_height="48dp"
+                        android:hint="Skill yang dibutuhkan"
+                        android:id="@+id/job_skills"
                         />
                 </RelativeLayout>
             </LinearLayout>
@@ -151,8 +164,9 @@
                     android:layout_weight="3">
                     <EditText
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/inputJobSalary"
+                        android:layout_height="48dp"
+                        android:hint="Gaji perbulan"
+                        android:id="@+id/job_salary"
                         />
                 </RelativeLayout>
             </LinearLayout>
@@ -160,11 +174,12 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/selesaiPostBtn"
+                android:id="@+id/btn_job_post"
                 android:layout_margin="30dp"
+                android:textSize="16sp"
                 android:text="Selesai"
                 android:background="@drawable/button_color"
-                android:textSize="16sp"/>
+                />
         </LinearLayout>
     </ScrollView>
         

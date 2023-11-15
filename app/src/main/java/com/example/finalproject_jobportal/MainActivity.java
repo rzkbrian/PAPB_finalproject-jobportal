@@ -22,8 +22,8 @@ public class MainActivity extends AppCompatActivity {
     private EditText email;
     private EditText password;
 
-    private Button btnSignin;
-    private Button btnSignup;
+    private Button btnLogin;
+    private Button btnRegistration;
     //Firebase
     private FirebaseAuth mAuth;
     //Process Dialog
@@ -35,20 +35,25 @@ public class MainActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
+        if(mAuth.getCurrentUser() !=null){
+            startActivity(new Intent(getApplicationContext(),HomeActivity.class));
+        }
+
+
         mDialog = new ProgressDialog(this);
         loginFunction();
     }
 
     private void loginFunction(){
-        email = findViewById(R.id.loginEmail);
-        password = findViewById(R.id.loginPassword);
+        email = findViewById(R.id.email_login);
+        password = findViewById(R.id.login_password);
 
-        btnSignin = findViewById(R.id.buttonSignin);
-        btnSignup = findViewById(R.id.buttonSignup);
+        btnLogin = findViewById(R.id.btn_login);
+        btnRegistration = findViewById(R.id.btn_reg);
 
 
 
-        btnSignin.setOnClickListener(new View.OnClickListener(){
+        btnLogin.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
                 String mEmail = email.getText().toString().trim();
@@ -71,21 +76,22 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
 
-                        mDialog.dismiss();
+
                         if(task.isSuccessful()){
                             Toast.makeText(getApplicationContext(), "Successfull", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(getApplicationContext(), HomeActivity.class));
-
+                            mDialog.dismiss();
                             finish();
                         } else{
                             Toast.makeText(getApplicationContext(), "Login Gagal", Toast.LENGTH_SHORT).show();
+                            mDialog.dismiss();
                         }
                     }
                 });
 
             }
         });
-        btnSignup.setOnClickListener(new View.OnClickListener() {
+        btnRegistration.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(), RegistrationActivity.class));

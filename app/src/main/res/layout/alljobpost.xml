@@ -1,71 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     app:cardElevation="5dp"
     android:elevation="5dp"
-    android:layout_margin="10dp"
-    android:background="@color/white"
-    >
+    android:layout_margin="15dp"
+    android:layout_height="wrap_content">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/all_job_post_title"
             android:text="Judul Pekerjaan"
-            android:padding="10dp"
+            android:layout_margin="5dp"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:padding="5dp"
             android:maxLines="1"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:id="@+id/job_title"
-            android:textColor="@color/black"
             />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="13 November, 2023"
-            android:padding="10dp"
-            android:maxLines="2"
+            android:id="@+id/all_job_post_date"
+            android:text="14 November, 2023"
+            android:layout_margin="5dp"
+            android:padding="5dp"
             android:textAppearance="?android:textAppearanceSmall"
-            android:id="@+id/job_date"
+            android:maxLines="2"
             />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Description"
-            android:textColor="@color/black"
-            android:padding="10dp"
+            android:id="@+id/all_job_post_description"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:text="Deskripsi Pekerjaan"
             android:maxLines="3"
             android:textAppearance="?android:textAppearanceMedium"
-            android:id="@+id/job_description"
-            />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Skills"
-            android:padding="10dp"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:maxLines="4"
             android:textColor="@color/black"
-            android:id="@+id/job_skills"
             />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/all_job_post_skills"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:text="Skill Pekerjaan"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/all_job_post_salary"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:textAppearance="?android:textAppearanceMedium"
             android:text="Gaji"
-            android:padding="10dp"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:maxLines="5"
             android:textColor="@color/black"
-            android:id="@+id/job_salary"
             />
 
     </LinearLayout>

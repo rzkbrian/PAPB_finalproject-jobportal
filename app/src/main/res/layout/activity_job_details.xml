@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".JobDetailsActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Job Title..."
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:id="@+id/job_details_title"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="15 Oktober, 2023"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:id="@+id/job_details_date"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Description..."
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:id="@+id/job_details_description"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Skills"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:id="@+id/job_details_skills"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Salary"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:id="@+id/job_details_salary"
+        />
+
+
+</LinearLayout>

@@ -22,11 +22,11 @@ import com.google.firebase.auth.FirebaseAuth;
 import org.checkerframework.common.reflection.qual.NewInstance;
 
 public class RegistrationActivity extends AppCompatActivity {
-    private EditText emailRegistration;
-    private EditText passRegistration;
+    private EditText email;
+    private EditText password;
 
-    private Button btnSignup;
-    private Button btnSingin;
+    private Button btnReg;
+    private Button btnLogin;
 
     private FirebaseAuth mAuth;
     private ProgressDialog mDialog;
@@ -41,32 +41,32 @@ public class RegistrationActivity extends AppCompatActivity {
     }
 
     private void regiatration(){
-        emailRegistration = findViewById(R.id.signupEmail);
-        passRegistration = findViewById(R.id.signupPassword);
+        email = findViewById(R.id.email_registration);
+        password = findViewById(R.id.registration_password);
 
-        btnSignup = findViewById(R.id.buttonSignupReg);
-        btnSingin = findViewById(R.id.buttonSigninReg);
+        btnReg = findViewById(R.id.btn_registration);
+        btnLogin = findViewById(R.id.btn_login);
 
-        btnSignup.setOnClickListener(new View.OnClickListener() {
+        btnReg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                String email = emailRegistration.getText().toString().trim();
-                String password = passRegistration.getText().toString().trim();
+                String mEmail = email.getText().toString().trim();
+                String pass = password.getText().toString().trim();
 
-                if(TextUtils.isEmpty(email)){
-                    emailRegistration.setError("Email diperlukan");
+                if(TextUtils.isEmpty(mEmail)){
+                    email.setError("Email diperlukan");
                     return;
                 }
 
-                if(TextUtils.isEmpty(password)){
-                    passRegistration.setError("Password tidak boleh kosong");
+                if(TextUtils.isEmpty(pass)){
+                    password.setError("Password tidak boleh kosong");
                     return;
                 }
 
                 mDialog.setMessage("Processing...");
                 mDialog.show();
-                mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                mAuth.createUserWithEmailAndPassword(mEmail,pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
@@ -77,6 +77,7 @@ public class RegistrationActivity extends AppCompatActivity {
                             mDialog.dismiss();
                         } else{
                             Toast.makeText(getApplicationContext(), "Registration Failed", Toast.LENGTH_SHORT).show();
+                            mDialog.dismiss();
                         }
                     }
                 });
@@ -84,7 +85,7 @@ public class RegistrationActivity extends AppCompatActivity {
             }
         });
 
-        btnSingin.setOnClickListener(new View.OnClickListener(){
+        btnLogin.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
