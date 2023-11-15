@@ -13,6 +13,18 @@
         android:theme="@style/Theme.AppCompat.Light"
         tools:targetApi="31">
         <activity
+            android:name=".AllJobPost"
+            android:exported="false" />
+        <activity
+            android:name=".model.AlJobPost"
+            android:exported="false" />
+        <activity
+            android:name=".ItemsAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".Items"
+            android:exported="false" />
+        <activity
             android:name=".JobDetailsActivity"
             android:exported="false" />
         <activity
@@ -39,9 +51,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
-
         <activity
             android:name=".MainActivity"
             android:exported="true" />

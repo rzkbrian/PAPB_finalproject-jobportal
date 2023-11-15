@@ -60,6 +60,7 @@ public class AllJobActivity extends AppCompatActivity {
         });
     }
 
+
     @Override
     protected void onStart() {
         super.onStart();
@@ -101,7 +102,7 @@ public class AllJobActivity extends AppCompatActivity {
                     @NonNull
                     @Override
                     public AllJobPostViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-                        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.alljobpost, parent, false);
+                        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_all_job_post, parent, false);
                         return new AllJobPostViewHolder(view);
                     }
                 };

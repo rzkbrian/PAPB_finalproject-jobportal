@@ -58,7 +58,7 @@
             android:padding="16dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:inputType="textVisiblePassword"
+            android:inputType="textPassword"
             android:textSize="16sp"
             android:textColor="@color/black"
             android:id="@+id/login_password"
